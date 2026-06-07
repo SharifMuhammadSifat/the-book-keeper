@@ -13,7 +13,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="flex gap-5 items-center">
-                <Link href="/login" className="btn btn-ghost text-xl bg-linear-to-r from-red-500 to-amber-900  p-2 rounded-md">
+                <Link href="/login" className="btn btn-ghost text-xl bg-linear-to-r from-red-500 to-amber-900 p-2 rounded-md shadow-md">
                     <span className=' text-white'>Login</span>
                 </Link>
                 <div className="dropdown dropdown-end">
