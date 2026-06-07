@@ -1,15 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
 import Avatar from "../../../assets/avatar.png";
+import Logo from "../../../assets/logo.png";
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <Link href="/" className="btn border-0 text-xl bg-transparent normal-case">
+                    <Image src={Logo} alt="Logo" width={40} height={40} /> <span className='bg-linear-to-r from-red-500 to-amber-900 bg-clip-text text-transparent '>TheBookKeeper</span>
+                </Link>
             </div>
-            <div className="flex gap-2">
-                <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+            <div className="flex gap-5 items-center">
+                <Link href="/login" className="btn btn-ghost text-xl bg-linear-to-r from-red-500 to-amber-900  p-2 rounded-md">
+                    <span className=' text-white'>Login</span>
+                </Link>
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
