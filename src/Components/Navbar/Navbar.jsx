@@ -16,9 +16,9 @@ const Navbar = () => {
 
                 <div>
                     <ul className="flex gap-5 items-center mx-auto">
-                        <li><Link href="/books">Books</Link></li>
-                        <li><Link href="/about">About</Link></li>
-                        <li><Link href="/contact">Contact</Link></li>
+                        <li><Link href="/">Home</Link></li>
+                        <li><Link href="/Books">All Books</Link></li>
+                        <li><Link href="/Profile">My Profile</Link></li>
                     </ul>
                 </div>
 

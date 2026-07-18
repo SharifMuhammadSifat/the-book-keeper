@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Lost Kingdom",
+    "author": "Emma Carter",
+    "description": "An adventurous tale of a young explorer uncovering the secrets of a forgotten kingdom.",
+    "category": "Story",
+    "available_quantity": 12,
+    "image_url": "https://picsum.photos/seed/book1/400/600"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery",
+    "author": "David Wilson",
+    "description": "A practical guide to modern JavaScript, covering ES6+, asynchronous programming, and best practices.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://picsum.photos/seed/book2/400/600"
+  },
+  {
+    "id": 3,
+    "title": "Beyond the Stars",
+    "author": "Sophia Reed",
+    "description": "Discover the wonders of galaxies, black holes, and the mysteries of the universe.",
+    "category": "Science",
+    "available_quantity": 15,
+    "image_url": "https://picsum.photos/seed/book3/400/600"
+  },
+  {
+    "id": 4,
+    "title": "Whispers in the Forest",
+    "author": "Liam Brooks",
+    "description": "A magical story of friendship, courage, and hidden creatures living deep within an enchanted forest.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "https://picsum.photos/seed/book4/400/600"
+  },
+  {
+    "id": 5,
+    "title": "Python for Beginners",
+    "author": "Olivia Martinez",
+    "description": "Learn Python programming from scratch with hands-on examples and real-world projects.",
+    "category": "Tech",
+    "available_quantity": 20,
+    "image_url": "https://picsum.photos/seed/book5/400/600"
+  },
+  {
+    "id": 6,
+    "title": "The Human Genome",
+    "author": "Dr. Michael Hayes",
+    "description": "An introduction to genetics, DNA sequencing, and the future of personalized medicine.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://picsum.photos/seed/book6/400/600"
+  },
+  {
+    "id": 7,
+    "title": "The Hidden Treasure",
+    "author": "Charlotte Evans",
+    "description": "A thrilling adventure where three friends follow an ancient map to uncover a legendary treasure.",
+    "category": "Story",
+    "available_quantity": 18,
+    "image_url": "https://picsum.photos/seed/book7/400/600"
+  },
+  {
+    "id": 8,
+    "title": "React in Action",
+    "author": "Noah Turner",
+    "description": "Build fast and scalable web applications using React, hooks, and modern development techniques.",
+    "category": "Tech",
+    "available_quantity": 14,
+    "image_url": "https://picsum.photos/seed/book8/400/600"
+  },
+  {
+    "id": 9,
+    "title": "The Quantum World",
+    "author": "Dr. Sarah Collins",
+    "description": "Explore quantum mechanics, wave-particle duality, and the science shaping tomorrow's technology.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://picsum.photos/seed/book9/400/600"
+  },
+  {
+    "id": 10,
+    "title": "Moonlight Memories",
+    "author": "Ethan Walker",
+    "description": "A heartfelt novel about love, family, and rediscovering forgotten dreams.",
+    "category": "Story",
+    "available_quantity": 11,
+    "image_url": "https://picsum.photos/seed/book10/400/600"
+  },
+  {
+    "id": 11,
+    "title": "Cloud Computing Essentials",
+    "author": "Grace Bennett",
+    "description": "Understand cloud infrastructure, virtualization, containers, and deployment strategies.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://picsum.photos/seed/book11/400/600"
+  },
+  {
+    "id": 12,
+    "title": "Climate Change Explained",
+    "author": "Dr. Nathan Foster",
+    "description": "A comprehensive overview of climate science, global warming, and sustainable solutions.",
+    "category": "Science",
+    "available_quantity": 13,
+    "image_url": "https://picsum.photos/seed/book12/400/600"
+  }
+]
