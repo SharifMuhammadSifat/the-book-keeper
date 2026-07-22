@@ -3,6 +3,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { allContext } from '../../Context/Context';
+import BooksCard from '../BooksCard/BooksCard';
 
 const Books = () => {
     const { books } = useContext(allContext);
@@ -10,10 +11,7 @@ const Books = () => {
     return (
         <div>
             {books.map((book) => (
-                <div key={book.id}>
-                    <h3>{book.title}</h3>
-                    <p>{book.author}</p>
-                </div>
+                <BooksCard key={book.id} book={book} />
             ))}
         </div>
     );
