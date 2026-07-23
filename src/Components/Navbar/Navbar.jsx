@@ -15,10 +15,10 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                    <ul className="flex gap-5 items-center mx-auto">
-                        <li><Link href="/">Home</Link></li>
-                        <li><Link href="/books">All Books</Link></li>
-                        <li><Link href="/Profile">My Profile</Link></li>
+                    <ul className="flex gap-5 items-center mx-auto text-[16px] font-semibold text-amber-900">
+                        <li className='hover:bg-linear-to-r from-red-500 to-amber-900 hover:text-white p-1.5 rounded-xl'><Link href="/">Home</Link></li>
+                        <li className='hover:bg-linear-to-r from-red-500 to-amber-900 hover:text-white p-1.5 rounded-xl'><Link href="/books">All Books</Link></li>
+                        <li className='hover:bg-linear-to-r from-red-500 to-amber-900 hover:text-white p-1.5 rounded-xl'><Link href="/Profile">My Profile</Link></li>
                     </ul>
                 </div>
 

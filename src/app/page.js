@@ -1,5 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "../../assets/logo.png";
 import { GoArrowRight } from "react-icons/go";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import FeaturedBooks from "../Components/FeaturedBooks/FeaturedBooks";
 
@@ -8,7 +13,7 @@ export default function Home() {
   return (
     <div>
 
-      <section className="hero min-h-[70vh] bg-linear-to-br from-red-500 to-amber-900">
+      <section className="hero min-h-[50vh] bg-linear-to-br from-red-500 to-amber-900">
         <div className="hero-content text-center">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-white">
@@ -45,7 +50,7 @@ export default function Home() {
           <p className="text-3xl font-bold text-amber-900">
             User Statistics
           </p>
-          <div className="mt-8 flex justify-around bg-amber-100 py-10 rounded-lg shadow-md">
+          <div className="mt-8 mb-8 flex justify-around bg-amber-100 py-10 rounded-lg shadow-md">
             <span className="flex flex-col justify-center items-center w-full border-r border-amber-900">
               <p className="text-2xl font-semibold text-amber-900">300K</p>
               <p className="text-lg text-amber-900">Active Users</p>
@@ -69,6 +74,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+    
 
 
 
