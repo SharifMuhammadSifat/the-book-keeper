@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const BooksCard = ({ book }) => {
     return (
@@ -8,7 +9,7 @@ const BooksCard = ({ book }) => {
                 <Image
                     src="https://picsum.photos/seed/book1/400/600"
                     alt={book.title}
-                    width={30}
+                    width={150}
                     height={20}
                 />
             </figure>
@@ -16,7 +17,9 @@ const BooksCard = ({ book }) => {
                 <h2 className="card-title">{book.title}</h2>
                 <p>{book.description}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Watch</button>
+                    <Link href={`/books/${book.id}`} className="text-black text-xl font-semibold bg-amber-100 hover:bg-linear-to-r from-red-500 to-amber-900 hover:text-white p-1.5 rounded-sm">
+                        Details
+                    </Link>
                 </div>
             </div>
         </div>

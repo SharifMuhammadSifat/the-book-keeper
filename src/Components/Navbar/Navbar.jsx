@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Avatar from "../../../assets/avatar.png";
 import Logo from "../../../assets/logo.png";
 import Link from 'next/link';
+import Navlink from '../Navlink/Navlink';
 
 const Navbar = () => {
     return (
@@ -16,9 +17,9 @@ const Navbar = () => {
 
                 <div>
                     <ul className="flex gap-5 items-center mx-auto text-[16px] font-semibold text-amber-900">
-                        <li className='hover:bg-linear-to-r from-red-500 to-amber-900 hover:text-white p-1.5 rounded-xl'><Link href="/">Home</Link></li>
-                        <li className='hover:bg-linear-to-r from-red-500 to-amber-900 hover:text-white p-1.5 rounded-xl'><Link href="/books">All Books</Link></li>
-                        <li className='hover:bg-linear-to-r from-red-500 to-amber-900 hover:text-white p-1.5 rounded-xl'><Link href="/Profile">My Profile</Link></li>
+                        <li><Navlink href={"/"}>Home</Navlink></li>
+                        <li><Navlink href={"/books"}>All Books</Navlink></li>
+                        <li><Navlink href={"/Profile"}>My Profile</Navlink></li>
                     </ul>
                 </div>
 
