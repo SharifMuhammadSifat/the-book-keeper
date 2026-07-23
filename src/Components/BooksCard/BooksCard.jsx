@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 const BooksCard = ({ book }) => {
     return (
-        <div className="card card-side bg-base-100 shadow-sm">
+        <div className="card card-side bg-base-100 shadow-sm w-auto">
             <figure>
                 <Image
                     src="https://picsum.photos/seed/book1/400/600"
                     alt={book.title}
-                    width={300}
-                    height={200}
+                    width={30}
+                    height={20}
                 />
             </figure>
             <div className="card-body">

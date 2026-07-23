@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import Marquee from "react-fast-marquee";
+import FeaturedBooks from "../Components/FeaturedBooks/FeaturedBooks";
 
 export default function Home() {
 
@@ -28,11 +29,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="bg-amber-500 px-30 py-3 text-amber-900 text-[16px] font-semibold">
+      <div className="bg-amber-500 px-30 py-3 text-amber-900 text-[16px] font-semibold mb-5">
         <Marquee speed={50} gradient={false} pauseOnHover={true}>
           New Arrivals: JavaScript Mastery | Special Discount on Memberships...
         </Marquee>
       </div>
+      <div className="px-5 md:px-20 mt-20">
+        <p className="text-3xl font-bold text-amber-900">
+          Featured Books
+        </p>
+        <FeaturedBooks />
+      </div>
+      
     </div>
   );
 }
