@@ -20,7 +20,7 @@ const Books = () => {
     return (
 
         <div>
-            <div className='flex justify-center items-center mt-5 bg-gray-100 p-5 rounded-md shadow-md'>
+            <div className='flex justify-center items-center mt-5 p-5 rounded-md shadow-sm'>
                 <input 
                     className='border-2 border-gray-200 w-full p-2 rounded-md shadow-md' 
                     placeholder='Search books by title...'
