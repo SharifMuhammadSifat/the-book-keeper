@@ -1,10 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import Logo from "../../assets/logo.png";
 import { GoArrowRight } from "react-icons/go";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import FeaturedBooks from "../Components/FeaturedBooks/FeaturedBooks";
 
