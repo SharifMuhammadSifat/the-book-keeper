@@ -11,6 +11,7 @@ const BooksCard = ({ book }) => {
                     alt={book.title}
                     width={150}
                     height={20}
+                    priority
                 />
             </figure>
             <div className="card-body">
