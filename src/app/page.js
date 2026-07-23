@@ -35,12 +35,43 @@ export default function Home() {
         </Marquee>
       </div>
       <div className="px-5 md:px-20 mt-20">
-        <p className="text-3xl font-bold text-amber-900">
-          Featured Books
-        </p>
-        <FeaturedBooks />
+        <div>
+          <p className="text-3xl font-bold text-amber-900">
+            Featured Books
+          </p>
+          <FeaturedBooks />
+        </div>
+        <div className="mt-20">
+          <p className="text-3xl font-bold text-amber-900">
+            User Statistics
+          </p>
+          <div className="mt-8 flex justify-around bg-amber-100 py-10 rounded-lg shadow-md">
+            <span className="flex flex-col justify-center items-center w-full border-r border-amber-900">
+              <p className="text-2xl font-semibold text-amber-900">300K</p>
+              <p className="text-lg text-amber-900">Active Users</p>
+            </span>
+
+            <span className="flex flex-col justify-center items-center w-full border-r border-amber-900">
+              <p className="text-2xl font-semibold text-amber-900">1M</p>
+              <p className="text-lg text-amber-900">Available Books</p>
+            </span>
+
+            <span className="flex flex-col justify-center items-center w-full border-r border-amber-900">
+              <p className="text-2xl font-semibold text-amber-900">4.8</p>
+              <p className="text-lg text-amber-900">Average Rating</p>
+            </span>
+
+            <span className="flex flex-col justify-center items-center w-full">
+              <p className="text-2xl font-semibold text-amber-900">100K</p>
+              <p className="text-lg text-amber-900">Members</p>
+            </span>
+
+          </div>
+        </div>
       </div>
-      
+
+
+
     </div>
   );
 }
