@@ -7,14 +7,18 @@ import BooksCard from '../BooksCard/BooksCard';
 
 
 const Books = () => {
-    const { books } = useContext(allContext);
+    const { books, isLoading } = useContext(allContext);
     const [inputValue, setInputValue] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
     const [searchedBooks, setSearchedBooks] = useState(books);
+    const [isSearching, setIsSearching] = useState(false);
+    
 
     const handelSearch = () => {
+        setIsSearching(true);
         setSearchTerm(inputValue);
         setSearchedBooks(books.filter((book) => book.title.toLowerCase().includes(searchTerm.toLowerCase())));
+        setIsSearching(false);
     }
 
     return (
@@ -45,9 +49,17 @@ const Books = () => {
 
 
             <div className="grid grid-cols-2 gap-10 mt-5 px-20 mb-15">
-                {searchTerm == "" ? books.filter((book) => book.title.toLowerCase().includes(searchTerm.toLowerCase())).map((book) => (
+                {isLoading ? (
+                    <div className="flex justify-center items-center col-span-2">
+                        <span className="loading loading-dots loading-xl"></span>
+                    </div>
+                ) : searchTerm == "" ? books.filter((book) => book.title.toLowerCase().includes(searchTerm.toLowerCase())).map((book) => (
                     <BooksCard key={book.id} book={book} />
-                )) : searchedBooks.map((book) => (
+                )) : isSearching ? (
+                    <div className="flex justify-center items-center col-span-2">
+                        <span className="loading loading-dots loading-xl"></span>
+                    </div>
+                ) : searchedBooks.map((book) => (
                     <BooksCard key={book.id} book={book} />
                 ))}
             </div>
