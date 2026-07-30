@@ -15,7 +15,7 @@ export default function Home() {
               Find Your Next Read
             </h1>
 
-            <p className="mt-6 text-lg text-amber-500 font-medium">
+            <p className="mt-6 text-lg text-amber-400 font-medium">
               Explore thousands of books across every genre. From timeless
               classics to the latest bestsellers, your next favorite story is
               waiting for you.
