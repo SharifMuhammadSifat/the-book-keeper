@@ -19,7 +19,7 @@ const Navbar = () => {
                     <ul className="flex gap-5 items-center mx-auto text-[16px] font-semibold text-amber-900">
                         <li><Navlink href={"/"}>Home</Navlink></li>
                         <li><Navlink href={"/books"}>All Books</Navlink></li>
-                        <li><Navlink href={"/Profile"}>My Profile</Navlink></li>
+                        <li><Navlink href={"/profile"}>My Profile</Navlink></li>
                     </ul>
                 </div>
 
