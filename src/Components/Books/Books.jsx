@@ -25,12 +25,22 @@ const Books = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchedBooks, setSearchedBooks] = useState(books);
     const [isSearching, setIsSearching] = useState(false);
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    const handleCategoryClick = (category) => {
+        setIsSearching(true);
+        setActiveCategory(category);
+        setInputValue('');
+        setSearchTerm('');
+        setIsSearching(false);
+    }
 
 
     const handelSearch = () => {
+        setActiveCategory("All");
         setIsSearching(true);
         setSearchTerm(inputValue);
-        setSearchedBooks(books.filter((book) => book.title.toLowerCase().includes(searchTerm.toLowerCase())));
+        setSearchedBooks(books.filter((book) => book.title.toLowerCase().includes(inputValue.toLowerCase())));
         setIsSearching(false);
     }
 
@@ -59,6 +69,7 @@ const Books = () => {
                     onClick={() => {
                         setInputValue('');
                         setSearchTerm('');
+                        setActiveCategory('All');
                     }}>
                     Clear
                 </button>
@@ -78,13 +89,19 @@ const Books = () => {
                             <div className="flex justify-center items-center col-span-2">
                                 <span className="loading loading-dots loading-xl"></span>
                             </div>
-                        ) : searchTerm == "" ? books.filter((book) => book.title.toLowerCase().includes(searchTerm.toLowerCase())).map((book) => (
+                        ) : searchTerm == "" && activeCategory === "All" ? books.map((book) => (
                             <BooksCard key={book.id} book={book} />
                         )) : isSearching ? (
                             <div className="flex justify-center items-center col-span-2">
                                 <span className="loading loading-dots loading-xl"></span>
                             </div>
-                        ) : searchedBooks.map((book) => (
+                        ) : activeCategory === "Story" ? books.filter((book) => book.category === "Story").map((book) => (
+                            <BooksCard key={book.id} book={book} />
+                        )) : activeCategory === "Tech" ? books.filter((book) => book.category === "Tech").map((book) => (
+                            <BooksCard key={book.id} book={book} />
+                        )) : activeCategory === "Science" ? books.filter((book) => book.category === "Science").map((book) => (
+                            <BooksCard key={book.id} book={book} />
+                        )) : searchedBooks.map((book) => (
                             <BooksCard key={book.id} book={book} />
                         ))}
                     </div>
@@ -95,7 +112,7 @@ const Books = () => {
                         <li className="menu-title text-2xl font-bold bg-linear-to-r from-red-500 to-amber-900 bg-clip-text text-transparent">Categories</li>
                         {categories.map((category) => (
                             <li key={category.id}>
-                                <button className='font-bold text-amber-900 hover:text-white hover:bg-linear-to-r from-red-500 to-amber-900 px-3 py-2 rounded-md'>{category.name}</button>
+                                <button onClick={() => handleCategoryClick(category.name)} className='font-bold text-amber-900 hover:text-white hover:bg-linear-to-r from-red-500 to-amber-900 px-3 py-2 rounded-md'>{category.name}</button>
                             </li>
                         ))}
                     </ul>
