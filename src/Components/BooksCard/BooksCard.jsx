@@ -7,11 +7,11 @@ const BooksCard = ({ book }) => {
         <div className="card card-side bg-base-100 shadow-sm w-auto">
             <figure>
                 <Image
-                    src="https://picsum.photos/seed/book1/400/600"
+                    src={book.image_url}
                     alt={book.title}
                     width={150}
                     height={20}
-                    priority
+                    priority="eager"
                 />
             </figure>
             <div className="card-body">
