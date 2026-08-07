@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const Profile = () => {
   const user = {
@@ -25,12 +26,8 @@ const Profile = () => {
           </h1>
 
           <div className="mt-8 flex w-full flex-col gap-4">
-            <button className="w-full rounded-lg bg-amber-500 py-3 text-white font-semibold transition hover:bg-amber-600">
-              Update Name
-            </button>
-
-            <button className="w-full rounded-lg bg-amber-800 py-3 text-white font-semibold transition hover:bg-amber-900">
-              Update Picture
+            <button className="w-full rounded-lg bg-linear-to-r from-red-500 to-amber-900 text-white py-3 font-semibold transition hover:bg-amber-600">
+              <Link href="/profile/update-details">Update Details</Link>
             </button>
           </div>
         </div>

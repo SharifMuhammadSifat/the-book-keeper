@@ -3,7 +3,7 @@ import react from "react";
 const updateName = () => {
     return (
         <div>
-            name update page
+            details update page
         </div>
     );
 };
