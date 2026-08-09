@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import Marquee from "react-fast-marquee";
 import FeaturedBooks from "../Components/FeaturedBooks/FeaturedBooks";
+import 'animate.css';
 
 export default function Home() {
 
@@ -21,7 +22,9 @@ export default function Home() {
               waiting for you.
             </p>
 
-            <div className="mt-8">
+
+
+            <div className="mt-8 animate__animated animate__heartBeat">
               <Link href="/books" className="btn border-0 text-xl bg-white normal-case">
                 <span className='bg-linear-to-r from-red-500 to-amber-900 bg-clip-text text-transparent flex justify-around items-center'>Browse Now <GoArrowRight className="ml-2" size={30} color="oklch(47% 0.157 37.304)" /></span>
               </Link>
@@ -34,6 +37,7 @@ export default function Home() {
           New Arrivals: JavaScript Mastery | Special Discount on Memberships...
         </Marquee>
       </div>
+
       <div className="px-5 md:px-20 mt-20">
         <div>
           <p className="text-3xl font-bold text-amber-900">
@@ -70,7 +74,7 @@ export default function Home() {
         </div>
       </div>
 
-    
+
 
 
 
