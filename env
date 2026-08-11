@@ -1,3 +1,0 @@
-BETTER_AUTH_SECRET=HUSOQpseDyYVGlOZIOCwh7Z3IaUry4J6
-BETTER_AUTH_URL=http://localhost:3000 # Base URL of your app
-MONGODB_URI=mongodb+srv://The-Book-Keeper:The-Book-Keeper@cluster0.oyebhlb.mongodb.net/?appName=Cluster0
