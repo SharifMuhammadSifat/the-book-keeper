@@ -2,10 +2,25 @@
 import React from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+import { authClient } from "@/lib/auth-client";
+
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const handleRegister = (data) => {
-        console.log(data);
+    const handleRegister = async (data) => {
+        const { res, error } = await authClient.signUp.email({
+            name: data.name,
+            email: data.email,
+            password: data.password,
+            image: data.photoURL,
+            callbackURL: "/",
+        });
+        if (error) {
+            console.log(error.message);
+        }
+        if (res) {
+            console.log("User registered successfully");
+
+        }
     }
     return (
         <div className='flex flex-col m-auto items-center justify-center gap-4'>

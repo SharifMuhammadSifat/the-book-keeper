@@ -2,10 +2,22 @@
 import React from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+import { authClient } from '@/lib/auth-client';
 const login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const handleLogin = (data) => {
-        console.log(data);
+    const handleLogin = async (data) => {
+        const { res, error } = await authClient.signIn.email({
+            email: data.email,
+            password: data.password,
+            rememberMe: true,
+            callbackURL: "/",
+        });
+        if (error) {
+            console.log(error.message);
+        }
+        if (res) {
+            console.log("User logged in successfully");
+        }
     }
     return (
         <div className='m-auto flex flex-col items-center justify-center gap-4'>
