@@ -1,27 +1,29 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
+import { useForm } from 'react-hook-form';
 const login = () => {
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        console.log(e.target.email.value, e.target.password.value);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const handleLogin = (data) => {
+        console.log(data);
     }
     return (
         <div className='m-auto flex flex-col items-center justify-center gap-4'>
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleSubmit(handleLogin)}>
 
 
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                     <legend className="fieldset-legend text-3xl text-amber-900 font-bold">Login</legend>
 
                     <label className="label">Email</label>
-                    <input type="email" className="input" placeholder="Email" name='email' />
+                    <input type="email" className="input" placeholder="Email" {...register("email", { required: 'Please provide your email' })} />
+                    {errors.email && <p className="text-red-500">{errors.email.message}</p>}
 
                     <label className="label">Password</label>
-                    <input type="password" className="input" placeholder="Password" name='password' />
+                    <input type="password" className="input" placeholder="Password" {...register("password", { required: 'Please provide your password' })} />
+                    {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+                    <button type='submit' className="btn bg-linear-to-r from-red-500 to-amber-900 text-white mt-4">Login</button>
                 </fieldset>
-                <button className="btn bg-linear-to-r from-red-500 to-amber-900 text-white mt-4">Login</button>
             </form>
             <div className='flex item-center justify-center gap-2'>
                 <h1>Don't have an account?</h1>
