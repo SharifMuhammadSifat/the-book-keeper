@@ -14,7 +14,7 @@ const NavButtons = () => {
             </div>
         ) : session ? (
             <div className="flex gap-5 items-center">
-                <button onClick={() => authClient.signOut()} className="btn btn-ghost text-xl bg-linear-to-r from-red-500 to-amber-900 p-2 rounded-md shadow-md">
+                <button onClick={async () => await authClient.signOut()} className="btn btn-ghost text-xl bg-linear-to-r from-red-500 to-amber-900 p-2 rounded-md shadow-md">
                     <span className=' text-white'>Logout</span>
                 </button>
                 <div className="dropdown dropdown-end">
