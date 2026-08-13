@@ -13,10 +13,10 @@ const login = () => {
             callbackURL: "/",
         });
         if (error) {
-            console.log(error.message);
+            toast.error(error.message);
         }
         if (res) {
-            console.log("User logged in successfully");
+            toast.success("User logged in successfully");
         }
     }
     return (
