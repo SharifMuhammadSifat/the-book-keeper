@@ -19,7 +19,7 @@ const Register = () => {
             toast.error(error.message);
         }
         if (res) {
-            toast("User registered successfully");
+            toast.success("User registered successfully");
 
         }
     }
