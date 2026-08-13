@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { authClient } from "@/lib/auth-client";
+import { toast } from 'react-toastify';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -15,10 +16,10 @@ const Register = () => {
             callbackURL: "/",
         });
         if (error) {
-            console.log(error.message);
+            toast.error(error.message);
         }
         if (res) {
-            console.log("User registered successfully");
+            toast("User registered successfully");
 
         }
     }
