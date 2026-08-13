@@ -20,7 +20,7 @@ const login = () => {
         }
     }
     return (
-        <div className='m-auto flex flex-col items-center justify-center gap-4'>
+        <div className='flex flex-col'>
             <form onSubmit={handleSubmit(handleLogin)}>
 
 
@@ -37,7 +37,7 @@ const login = () => {
                     <button type='submit' className="btn bg-linear-to-r from-red-500 to-amber-900 text-white mt-4">Login</button>
                 </fieldset>
             </form>
-            <div className='flex item-center justify-center gap-2'>
+            <div className='flex items-center justify-center gap-2'>
                 <h1>Don't have an account?</h1>
                 <Link href="/register" className="bg-linear-to-r from-red-500 to-amber-900 bg-clip-text text-transparent">Register</Link>
             </div>

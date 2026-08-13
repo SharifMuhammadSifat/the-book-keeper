@@ -23,7 +23,7 @@ const Register = () => {
         }
     }
     return (
-        <div className='flex flex-col m-auto items-center justify-center gap-4'>
+        <div className='flex flex-col'>
             <form onSubmit={handleSubmit(handleRegister)}>
 
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
@@ -48,7 +48,7 @@ const Register = () => {
                     <button type='submit' className="btn bg-linear-to-r from-red-500 to-amber-900 text-white mt-4">Register</button>
                 </fieldset>
             </form>
-            <div className='flex item-center justify-center gap-2'>
+            <div className='flex items-center justify-center gap-2'>
                 <h1>Already have an account?</h1>
                 <Link href="/login" className="bg-linear-to-r from-red-500 to-amber-900 bg-clip-text text-transparent '">Login</Link>
             </div>

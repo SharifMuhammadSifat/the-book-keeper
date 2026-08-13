@@ -3,12 +3,14 @@ import { GoArrowRight } from "react-icons/go";
 import Marquee from "react-fast-marquee";
 import FeaturedBooks from "../Components/FeaturedBooks/FeaturedBooks";
 import 'animate.css';
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 export default function Home() {
 
   return (
     <div>
-
+      <Navbar />
       <section className="hero min-h-[50vh] bg-linear-to-br from-red-500 to-amber-900">
         <div className="hero-content text-center">
           <div className="max-w-2xl">
@@ -73,6 +75,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
