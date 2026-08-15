@@ -5,8 +5,18 @@ import Link from "next/link"
 import Image from "next/image";
 
 
+import { useRouter } from "next/navigation";
+
 const NavButtons = () => {
-    const { data: session, isPending } = authClient.useSession()
+    const router = useRouter();
+    const { data: session, isPending } = authClient.useSession();
+
+    const handleLogout = async () => {
+        await authClient.signOut();
+        router.push("/");
+        router.refresh();
+    };
+
     return (
         isPending ? (
             <div className="flex gap-5 items-center">
@@ -14,7 +24,7 @@ const NavButtons = () => {
             </div>
         ) : session ? (
             <div className="flex gap-5 items-center">
-                <button onClick={async () => await authClient.signOut()} className="btn btn-ghost text-xl bg-linear-to-r from-red-500 to-amber-900 p-2 rounded-md shadow-md">
+                <button onClick={handleLogout} className="btn btn-ghost text-xl bg-linear-to-r from-red-500 to-amber-900 p-2 rounded-md shadow-md">
                     <span className=' text-white'>Logout</span>
                 </button>
                 <div className="dropdown dropdown-end">
@@ -31,7 +41,7 @@ const NavButtons = () => {
                                 Profile
                             </Link>
                         </li>
-                        <li><button onClick={() => authClient.signOut()}>Logout</button></li>
+                        <li><button onClick={handleLogout}>Logout</button></li>
                     </ul>
                 </div>
             </div>
