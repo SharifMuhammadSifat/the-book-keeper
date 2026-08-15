@@ -84,7 +84,7 @@ const Books = () => {
                         Open drawer
                     </label>
 
-                    <div className="grid grid-cols-2 gap-10 mt-5 px-10 mb-15">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 px-10 mb-15">
                         {isLoading ? (
                             <div className="flex justify-center items-center col-span-2">
                                 <span className="loading loading-dots loading-xl"></span>
