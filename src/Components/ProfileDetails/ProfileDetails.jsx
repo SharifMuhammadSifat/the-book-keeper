@@ -20,6 +20,7 @@ const ProfileDetails = () => {
                             width={180}
                             height={180}
                             className="rounded-full object-cover border-4 border-amber-500"
+                            loading="eager"
                         />
 
                         <h1 className="mt-6 text-3xl font-bold text-gray-800">
