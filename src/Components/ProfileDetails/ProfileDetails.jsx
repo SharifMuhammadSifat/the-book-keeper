@@ -11,7 +11,7 @@ const ProfileDetails = () => {
                 <span className="loading loading-ring loading-xl"></span>
             </div>
         ) : (
-            <div className="min-h-screen flex items-center justify-center bg-amber-50 px-4">
+            <div className="flex-1 flex flex-col items-center justify-center bg-amber-50 px-4 py-8">
                 <div className="w-full max-w-md rounded-xl bg-white shadow-lg p-8">
                     <div className="flex flex-col items-center">
                         <Image
@@ -27,9 +27,9 @@ const ProfileDetails = () => {
                         </h1>
 
                         <div className="mt-8 flex w-full flex-col gap-4">
-                            <button className="w-full rounded-lg bg-linear-to-r from-red-500 to-amber-900 text-white py-3 font-semibold transition hover:bg-amber-600">
-                                <Link href="/profile/update-details">Update Details</Link>
-                            </button>
+                            <Link href="/profile/update-details" className="w-full flex items-center justify-center rounded-lg bg-linear-to-r from-red-500 to-amber-900 text-white py-3 font-semibold transition hover:bg-amber-600">
+                                Update Details
+                            </Link>
                         </div>
                     </div>
                 </div>

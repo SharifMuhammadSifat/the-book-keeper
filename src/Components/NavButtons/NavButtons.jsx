@@ -20,7 +20,7 @@ const NavButtons = () => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            {<Image src={session.user.image} alt="Avatar" width={40} height={40} />}
+                            {<Image src={session.user.image} alt="Avatar" width={40} height={40} loading="eager" />}
                         </div>
                     </div>
                     <ul
