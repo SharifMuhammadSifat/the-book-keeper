@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react';
-import {createContext, useState, useEffect} from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 
 
-const getBooks = async() => {
+const getBooks = async () => {
     const books = await fetch('/books.json');
     const booksData = await books.json();
     return booksData;
@@ -26,7 +26,7 @@ const Context = ({ children }) => {
     }, []);
 
     return (
-        <allContext.Provider value={{books, isLoading}}>
+        <allContext.Provider value={{ books, isLoading }}>
             {children}
         </allContext.Provider>
     );
