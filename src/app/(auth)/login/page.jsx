@@ -43,7 +43,7 @@ const login = () => {
                     <input type="password" className="input" placeholder="Password" {...register("password", { required: 'Please provide your password' })} />
                     {errors.password && <p className="text-red-500">{errors.password.message}</p>}
                     <button type='submit' className="btn bg-linear-to-r from-red-500 to-amber-900 text-white mt-4">Login</button>
-                    <button className='btn bg-linear-to-r from-red-500 to-amber-900 text-white mt-4' onClick={() => handleGoogleLogin()}>Login with Google</button>
+                    <button className='btn bg-linear-to-r from-red-500 to-amber-900 text-white mt-4' onClick={handleGoogleLogin}>Login with Google</button>
                 </fieldset>
             </form>
             <div className='flex items-center justify-center gap-2'>

@@ -18,4 +18,8 @@ export const auth = betterAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     },
   },
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://the-book-keeper-fawn.vercel.app",
+  ],
 });
