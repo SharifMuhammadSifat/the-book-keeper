@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
 const login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const handleLogin = async (data) => {
