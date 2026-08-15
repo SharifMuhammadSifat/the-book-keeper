@@ -3,8 +3,6 @@ import Avatar from "../../../assets/avatar.png";
 import { authClient } from "@/lib/auth-client"
 import Link from "next/link"
 import Image from "next/image";
-
-
 import { useRouter } from "next/navigation";
 
 const NavButtons = () => {
