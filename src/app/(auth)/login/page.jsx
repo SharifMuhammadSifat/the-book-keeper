@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const handleLogin = async (data) => {
-        const { data: res, error } = await authClient.signIn.email({
+        const { res, error } = await authClient.signIn.email({
             email: data.email,
             password: data.password,
             rememberMe: true,
