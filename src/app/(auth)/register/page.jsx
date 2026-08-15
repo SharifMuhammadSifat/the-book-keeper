@@ -8,12 +8,12 @@ import { toast } from 'react-toastify';
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const handleRegister = async (data) => {
-        const { data: res, error } = await authClient.signUp.email({
+        const { res, error } = await authClient.signUp.email({
             name: data.name,
             email: data.email,
             password: data.password,
             image: data.photoURL,
-            callbackURL: "/",
+            callbackURL: "/login",
         });
         if (error) {
             toast.error(error.message);
